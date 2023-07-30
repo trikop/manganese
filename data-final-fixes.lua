@@ -21,3 +21,9 @@ if mods["space-exploration"] then
     data.raw.item["se-space-thermodynamics-laboratory"].ingredient_count = 24, --made it 24, so it won't conflict with another mod hopefully xD
     util.add_ingredient("se-experimental-alloys-data","manganese-plate", 1)
 end
+
+for i, entity in pairs(data.raw.furnace) do
+    if entity.result_inventory_size ~= nil and entity.result_inventory_size < 4 and util.contains(entity.crafting_categories, "smelting") then
+      entity.result_inventory_size = 4
+    end
+  end
