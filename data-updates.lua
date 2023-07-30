@@ -1,6 +1,5 @@
-require("prototypes/manganese-recipe-updates")
-require("prototypes/manganese-matter")
-require("prototypes/manganese-recipe-modules")
+require("prototypes/ore/manganese-recipe-updates")
+require("prototypes/ore/manganese-matter")
 
 require("map-gen-preset-updates")
 

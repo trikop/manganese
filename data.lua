@@ -1,5 +1,7 @@
-require("prototypes/manganese-ore")
-require("prototypes/manganese-recipe")
+require("prototypes/ore/manganese-ore")
+require("prototypes/ore/manganese-recipe")
 
-require("prototypes/manganese-enriched")
-require("prototypes/manganese-recipe-se")
+require("prototypes/ore/manganese-enriched")
+require("prototypes/ore/manganese-recipe-se")
+
+require("prototypes/alloys/bismanol")

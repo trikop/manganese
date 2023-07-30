@@ -37,7 +37,7 @@ data:extend({
     icon_size = 64,
     flags = {"placeable-neutral"},
     order="a-b-a",
-    map_color = {r=0.5, g=0.33, b=0.16},
+    map_color = {r=0.43, g=0.18, b=0.06},
     tree_removal_probability = 0.7,
     tree_removal_max_distance = 32 * 32,
     minable =
