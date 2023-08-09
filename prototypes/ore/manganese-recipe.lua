@@ -20,7 +20,7 @@ data:extend({
     normal = (mods["Krastorio2"] and
         {
           main_product = util.me.manganese_plate,
-          enabled = true,
+          enabled = false,
           energy_required = 10,
           ingredients = {{"manganese-ore", 10}},
           results = {
@@ -29,7 +29,7 @@ data:extend({
         } or
         {
           main_product = util.me.manganese_plate,
-          enabled = true,
+          enabled = false,
           energy_required = 1,
           ingredients = {{"manganese-ore", 1}},
           results = {
@@ -39,7 +39,7 @@ data:extend({
     expensive =
     {
       main_product = util.me.manganese_plate,
-      enabled = true,
+      enabled = false,
       energy_required = 12.8,
       ingredients = {{"manganese-ore", 4}},
       results = {
@@ -56,6 +56,22 @@ data:extend({
     order = "b[manganese-plate]",
     stack_size = util.get_stack_size(100)
   },
+  {
+    type = "technology",
+    name = "manganese-smelting",
+    icon = "__manganese__/graphics/icons/manganese-plate.png",
+    icon_size = 64,
+    order = "c",
+    effects = {
+    { type = "unlock-recipe", recipe = util.me.manganese_plate },
+    { type = "unlock-recipe", recipe = "crushed-manganese" },
+    },
+    unit = {
+    count = 30, time = 5,
+    ingredients = {{"automation-science-pack", 1}},
+    },
+    prerequisites = {},
+},
   mods["TheBigFurnace"] and {
     type = "recipe",
     name = "big-manganese-plate",
@@ -84,3 +100,5 @@ data:extend({
   } or nil,
 })
 end
+
+util.add_prerequisite("steel-processing", "manganese-smelting")

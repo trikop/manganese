@@ -15,14 +15,13 @@ data:extend({
 {
     type = "recipe",
     name = "crushed-manganese",
-    category = "smelting",
+    category = "crafting",
     order = "d[crushed-manganese]",
     enabled = false,
-    energy_required = 1,
+    energy_required = 20,
     ingredients = {{"manganese-plate", 1}}, 
-    results = {{"crushed-manganese", 100}},
+    results = {{"crushed-manganese", 20}},
 },
 })
 
-util.add_ingredient("steel-plate", "crushed-manganese", 1)
-util.add_unlock_force("steel-processing", "crushed-manganese")
+

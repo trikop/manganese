@@ -22,6 +22,11 @@ if mods["space-exploration"] then
     util.add_ingredient("se-experimental-alloys-data","manganese-plate", 1)
 end
 
+if mods.Krastorio2 then
+    util.replace_ingredient("rail", "steel-beam", "mangalloy")
+    -- util.replace_ingredient("kr-quarry-drill", "steel-plate", "mangalloy")
+end
+
 for i, entity in pairs(data.raw.furnace) do
     if entity.result_inventory_size ~= nil and entity.result_inventory_size < 4 and util.contains(entity.crafting_categories, "smelting") then
       entity.result_inventory_size = 4

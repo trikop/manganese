@@ -26,7 +26,7 @@ data:extend({
     order = "d[mangalloy]",
     enabled = false,
     energy_required = 13,
-    ingredients = {{"manganese-plate", 5}, {"iron-plate", 5}}, 
+    ingredients = {{"manganese-plate", 1}, {"iron-plate", 9}}, 
     results = {{type = "item", name = "mangalloy", amount = 5}},
 },
 {
@@ -40,7 +40,7 @@ data:extend({
     },
     unit = {
     count = 30, time = 10,
-    ingredients = {{"automation-science-pack", 1}},
+    ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}},
     },
     prerequisites = {"steel-processing"},
 },
@@ -48,8 +48,10 @@ data:extend({
 util.add_unlock_force("mangalloy", "mangalloy")
 if mods.bzfoundry and data.raw.item["foundry"] then util.set_to_founding("mangalloy", {force=true}) end
 
--- if mods["aai-industry"] then
---     util.add_prerequisite("electricity", "mangalloy")
--- else
---     util.add_prerequisite("automation", "mangalloy")
--- end
+util.add_prerequisite("railway", "mangalloy")
+util.replace_ingredient("rail", "steel-plate", "mangalloy")
+
+
+if mods["aai-industry"] then
+    util.replace_ingredient("area-mining-drill", "steel-plate", "mangalloy")
+end
