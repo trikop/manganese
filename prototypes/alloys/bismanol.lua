@@ -1,10 +1,13 @@
 local util = require("__manganese__.data-util");
 
 local category = {}
+local ingredients = {}
 if mods.Krastorio2 then 
     category = "smelting"
+    ingredients = {{"basic-tech-card", 1}}
 else
     category = "crafting"
+    ingredients = {{"automation-science-pack", 1}}
 end
 
 if data.raw.item["bismuth-plate"] then 
@@ -26,9 +29,9 @@ if data.raw.item["bismuth-plate"] then
         category = category,
         order = "d[bismanol]",
         enabled = false,
-        energy_required = 1,
+        energy_required = 30,
         ingredients = {{"manganese-plate", 5}, {"bismuth-plate", 5}, {"iron-plate", 1}}, 
-        results = {{type = "item", name = "bismanol", amount = 5}},
+        results = {{type = "item", name = "bismanol", amount = 10}},
     },
     {
         type = "technology",
@@ -41,7 +44,7 @@ if data.raw.item["bismuth-plate"] then
         },
         unit = {
         count = 30, time = 10,
-        ingredients = {{"automation-science-pack", 1}},
+        ingredients = ingredients,
         },
         prerequisites = {},
     },

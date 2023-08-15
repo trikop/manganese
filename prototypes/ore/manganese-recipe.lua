@@ -21,7 +21,7 @@ data:extend({
         {
           main_product = util.me.manganese_plate,
           enabled = false,
-          energy_required = 10,
+          energy_required = 16,
           ingredients = {{"manganese-ore", 10}},
           results = {
             {type="item", name = util.me.manganese_plate, amount=10},
@@ -30,7 +30,7 @@ data:extend({
         {
           main_product = util.me.manganese_plate,
           enabled = false,
-          energy_required = 1,
+          energy_required = 1.6,
           ingredients = {{"manganese-ore", 1}},
           results = {
             {type="item", name = util.me.manganese_plate, amount=1},
@@ -40,7 +40,7 @@ data:extend({
     {
       main_product = util.me.manganese_plate,
       enabled = false,
-      energy_required = 12.8,
+      energy_required = 32,
       ingredients = {{"manganese-ore", 4}},
       results = {
         {type="item", name = util.me.manganese_plate, amount=2},
