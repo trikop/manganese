@@ -3,8 +3,10 @@ local util = require("__manganese__.data-util");
 local category = {}
 local ingredients = {}
 if mods.Krastorio2 then 
+    category = "smelting"
     ingredients = {{"basic-tech-card", 1}}
 else
+    category = "crafting"
     ingredients = {{"automation-science-pack", 1}}
 end
 
@@ -24,7 +26,7 @@ if data.raw.item["bismuth-plate"] then
     {
         type = "recipe",
         name = "bismanol",
-        category = "smelting",
+        category = category,
         order = "d[bismanol]",
         enabled = false,
         energy_required = 30,
@@ -48,8 +50,7 @@ if data.raw.item["bismuth-plate"] then
     },
     })
     util.add_unlock_force("bismanol", "bismanol")
-    if mods.bzfoundry and data.raw.item["foundry"] then util.set_to_founding("bismanol", {force=true}) end
-
+    
     if mods["aai-industry"] then
         util.add_prerequisite("electricity", "bismanol")
         util.add_ingredient("electric-motor","bismanol", 1)
