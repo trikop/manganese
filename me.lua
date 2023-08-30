@@ -3,8 +3,7 @@ local me = {}
 me.name = "manganese"
 me.manganese_ore = "manganese-ore"
 me.manganese_plate = "manganese-plate"
-me.recipes = {me.manganese_plate, "enriched-manganese-plate", "enriched-manganese", "manganese-smelting-vulcanite", "molten-manganese", "enriched-manganese-smelting-vulcanite",
-              "pcb-solder"}
+me.recipes = {me.manganese_plate, "enriched-manganese-plate", "enriched-manganese", "manganese-smelting-vulcanite", "molten-manganese", "enriched-manganese-smelting-vulcanite"}
 
 
 function me.get_setting(name)
