@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2023-11-9
+  Features:
+    - (K2) Buffed enriched manganese
+    - Added Bismanol in electric engine units when AAI industry is not enabled
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2023-08-23
   Features:

@@ -73,7 +73,7 @@ data:extend(
         {"enriched-manganese", 5}
       },
       result = "manganese-plate",
-      result_count = 5,
+      result_count = 12,
       order = "b[manganese-plate]-b[enriched-manganese-plate]"
   },	
 	{
