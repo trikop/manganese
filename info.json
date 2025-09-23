@@ -1,13 +1,13 @@
 {
     "name": "manganese",
-    "version": "0.0.4",
+    "version": "2.0.0",
     "title": "Manganese",
     "author": "trikop",
-    "factorio_version": "1.1",
+    "factorio_version": "2.0",
     "description": "Intended to be played with all BZ mods. And also in the SEK2BZ combo for a very so called fun experience.\nAdds Manganese and alloys using it.\n\nMost code is a modified version of the code in Brevven's mods (the BZ mods) It's quite useful as a base for making a mod I'd say :D\n\nMost of the graphics is placeholderish, will have to do something about that xD",
     "dependencies": [
         "? bismuth",
-        "? space-exploration >= 0.6",
+        "? space-exploration >= 0.7",
         "? Krastorio2",
         "? aai-industry",
         "? 248k"

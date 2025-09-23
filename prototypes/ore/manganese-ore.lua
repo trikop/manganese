@@ -53,7 +53,7 @@ data:extend({
       hardness = 2.25,
       mining_particle = "iron-ore-particle",
       mining_time = 1,
-      result = "lead-ore"
+      result = "manganese-ore"
     },
     collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
@@ -61,10 +61,10 @@ data:extend({
       name = "manganese-ore",
       order = "b-z",
       base_density = 4,
-      base_spots_per_km2 = 0.9,
+      base_spots_per_km2 = 1.4,
       has_starting_area_placement = true,
-      regular_rq_factor_multiplier = 0.55,
-      starting_rq_factor_multiplier = 0.55,
+      regular_rq_factor_multiplier = 1,
+      starting_rq_factor_multiplier = 0.8,
     },
 
     stage_counts = {15000, 10000, 5000, 3000, 1500, 500, 150, 80},

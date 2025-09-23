@@ -25,8 +25,8 @@ data:extend({
     order = "d[crushed-manganese]",
     enabled = false,
     energy_required = 21,
-    ingredients = {{"manganese-plate", 1}}, 
-    results = {{"crushed-manganese", 20}},
+    ingredients = {{type="item", name = "manganese-plate", amount = 1}}, 
+    results = {{type="item", name = "crushed-manganese", amount = 20}},
 },
 })
 

@@ -30,7 +30,11 @@ if data.raw.item["bismuth-plate"] then
         order = "d[bismanol]",
         enabled = false,
         energy_required = 30,
-        ingredients = {{"manganese-plate", 5}, {"bismuth-plate", 5}, {"iron-plate", 1}}, 
+        ingredients = {
+            {type="item", name = "manganese-plate", amount = 5},
+            {type="item", name = "bismuth-plate", amount = 5},
+            {type="item", name = "iron-plate", amount = 1}
+        }, 
         results = {{type = "item", name = "bismanol", amount = 10}},
     },
     {

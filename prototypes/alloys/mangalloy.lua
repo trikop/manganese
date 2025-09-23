@@ -26,7 +26,10 @@ data:extend({
     order = "d[mangalloy]",
     enabled = false,
     energy_required = 13,
-    ingredients = {{"manganese-plate", 1}, {"iron-plate", 9}}, 
+    ingredients = {
+        {type="item", name = "manganese-plate", amount = 1}, 
+        {type="item", name = "iron-plate", amount = 9}
+    },
     results = {{type = "item", name = "mangalloy", amount = 5}},
 },
 {
