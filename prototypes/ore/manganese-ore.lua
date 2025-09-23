@@ -1,6 +1,10 @@
 local resource_autoplace = require("resource-autoplace");
-local noise = require('noise');
 local util = require("__manganese__.data-util");
+local item_sounds = require('__base__.prototypes.item_sounds')
+
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["lead-ore"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["lead-ore"] = {}
+resource_autoplace.initialize_patch_set("lead-ore", true)
 
 data:extend({
   {
@@ -10,15 +14,14 @@ data:extend({
     richness = true,
     order = "b-e"
   },
-  {
-    type = "noise-layer",
-    name = "manganese-ore"
-  },
+  -- {
+  --   type = "noise-layer",
+  --   name = "manganese-ore"
+  -- },
   {
     type = "item",
     name = "manganese-ore",
-    icon_size = 64,
-    icon_mipmaps = 4,
+  icon_size = 64, icon_mipmaps = 4,
     icon = "__manganese__/graphics/icons/manganese-ore.png",
     pictures = {
       {filename="__manganese__/graphics/icons/manganese-ore.png", size=64, scale=0.25},
@@ -28,7 +31,11 @@ data:extend({
     },
     subgroup = "raw-resource",
     order = "t-c-a",
-    stack_size = util.get_stack_size(50)
+    stack_size = util.get_stack_size(50),
+    weight = 4.5*kg,
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
   },
   {
     type = "resource",
@@ -45,10 +52,7 @@ data:extend({
       hardness = 2.25,
       mining_particle = "iron-ore-particle",
       mining_time = 1,
-      results = 
-      {
-        {type="item", name="manganese-ore", amount=1},
-      }
+      result = "lead-ore"
     },
     collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
@@ -56,10 +60,10 @@ data:extend({
       name = "manganese-ore",
       order = "b-z",
       base_density = 4,
-      base_spots_per_km2 = 1,
+      base_spots_per_km2 = 0.9,
       has_starting_area_placement = true,
-      regular_rq_factor_multiplier = 1,
-      starting_rq_factor_multiplier = 1,
+      regular_rq_factor_multiplier = 0.55,
+      starting_rq_factor_multiplier = 0.55,
     },
 
     stage_counts = {15000, 10000, 5000, 3000, 1500, 500, 150, 80},

@@ -9,7 +9,7 @@ data:extend({
     name = util.me.manganese_plate,
     category = "smelting",
     order = "d[manganese-plate]",
-    icons = (mods["Krastorio2"] and
+    icons = (util.k2() and
         {
           { icon = "__manganese__/graphics/icons/manganese-plate.png", icon_size = 64, icon_mipmaps = 3, },
           { icon = "__manganese__/graphics/icons/manganese-ore.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
@@ -17,35 +17,35 @@ data:extend({
           { icon = "__manganese__/graphics/icons/manganese-plate.png", icon_size = 64, icon_mipmaps = 3, },
         }
 ),
-    normal = (mods["Krastorio2"] and
-        {
-          main_product = util.me.manganese_plate,
-          enabled = false,
-          energy_required = 16,
-          ingredients = {{"manganese-ore", 10}},
-          results = {
-            {type="item", name = util.me.manganese_plate, amount=10},
-          },
-        } or
-        {
-          main_product = util.me.manganese_plate,
-          enabled = false,
-          energy_required = 1.6,
-          ingredients = {{"manganese-ore", 1}},
-          results = {
-            {type="item", name = util.me.manganese_plate, amount=1},
-          },
-        }),
-    expensive =
-    {
-      main_product = util.me.manganese_plate,
-      enabled = false,
-      energy_required = 32,
-      ingredients = {{"manganese-ore", 4}},
-      results = {
-        {type="item", name = util.me.manganese_plate, amount=2},
-      },
-    }
+    main_product = util.me.manganese_plate,
+    -- normal = (mods["Krastorio2"] and
+    --     {
+    --       main_product = util.me.manganese_plate,
+    --       enabled = false,
+    --       energy_required = 16,
+    --       ingredients = {{"manganese-ore", 10}},
+    --       results = {
+    --         {type="item", name = util.me.manganese_plate, amount=10},
+    --       },
+    --     } or
+    --     {
+   
+    enabled = false,
+    energy_required = 1.6,
+    ingredients = {{"manganese-ore", 1}},
+    results = {
+      {type="item", name = util.me.manganese_plate, amount=1},
+    },
+    --expensive =
+    -- {
+    --   main_product = util.me.manganese_plate,
+    --   enabled = false,
+    --   energy_required = 32,
+    --   ingredients = {{"manganese-ore", 4}},
+    --   results = {
+    --     {type="item", name = util.me.manganese_plate, amount=2},
+    --   },
+    -- }
   },
   {
     type = "item",
@@ -54,7 +54,11 @@ data:extend({
     icon_size = 64, icon_mipmaps = 3,
     subgroup = "raw-material",
     order = "b[manganese-plate]",
-    stack_size = util.get_stack_size(100)
+    stack_size = util.get_stack_size(100),
+    weight = 2*kg,
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
   },
   {
     type = "technology",
