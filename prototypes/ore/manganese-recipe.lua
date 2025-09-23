@@ -1,6 +1,7 @@
 -- manganese smelting
 
 local util = require("__manganese__.data-util");
+local item_sounds = require('__base__.prototypes.item_sounds')
 
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
 data:extend({
@@ -31,8 +32,9 @@ data:extend({
     --     {
    
     enabled = false,
+    allow_productivity = true,
     energy_required = 1.6,
-    ingredients = {{"manganese-ore", 1}},
+    ingredients = {util.item("manganese-ore", 1)},
     results = {
       {type="item", name = util.me.manganese_plate, amount=1},
     },

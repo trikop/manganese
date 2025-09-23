@@ -2,9 +2,9 @@ local resource_autoplace = require("resource-autoplace");
 local util = require("__manganese__.data-util");
 local item_sounds = require('__base__.prototypes.item_sounds')
 
-data.raw.planet.nauvis.map_gen_settings.autoplace_controls["lead-ore"] = {}
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["lead-ore"] = {}
-resource_autoplace.initialize_patch_set("lead-ore", true)
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["manganese-ore"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["manganese-ore"] = {}
+resource_autoplace.initialize_patch_set("manganese-ore", true)
 
 data:extend({
   {
@@ -42,6 +42,7 @@ data:extend({
     name = "manganese-ore",
     icon = "__manganese__/graphics/icons/manganese-ore.png",
     icon_size = 64,
+    subgroup = "raw-resource",
     flags = {"placeable-neutral"},
     order="a-b-a",
     map_color = {r=0.43, g=0.18, b=0.06},
