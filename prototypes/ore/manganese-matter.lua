@@ -37,7 +37,7 @@ data:extend(
 
 local manganese_matter =
 	{
-    material = { type = "item", name = "bismuth-ore", amount = 10 },
+    material = { type = "item", name = "manganese-ore", amount = 10 },
     item_name = "manganese-ore",
     matter_count = 5,
     energy_required = 1,
@@ -49,7 +49,7 @@ matter.make_recipes(manganese_matter)
 
 local manganese_plate_matter =
 	{
-    material = { type = "item", name = "bismuth-plate", amount = 10 },
+    material = { type = "item", name = "manganese-plate", amount = 10 },
     item_name = "manganese-plate",
     matter_count = 7.5,
     energy_required = 2,

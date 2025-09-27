@@ -6,7 +6,7 @@ if mods["space-exploration"] then
   se_delivery_cannon_recipes[util.me.manganese_plate] = {name= util.me.manganese_plate}
   util.se_landfill({ore="manganese-ore"})
 
-if string.sub(mods["space-exploration"], 1, 3) == "0.7" then
+  if util.se6() then
   util.se_matter({ore="manganese-ore", energy_required=1, quant_out=10, stream_out=60})
   data:extend({
   {
@@ -51,7 +51,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.7" then
     },
     energy_required = 60,
     ingredients = {
-      {type = "item", name = mods.Krastorio2 and "enriched-manganese" or "manganese-ore", amount = 24},
+      {type= "item", name = util.k2() and "enriched-manganese" or "manganese-ore", amount = 24},
       {type = "fluid", name = "se-pyroflux", amount = 10},
     },
     enabled = false,
@@ -63,7 +63,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.7" then
     type = "recipe",
     name = "manganese-ingot",
     category = "casting",
-    results = {{type = "item", "manganese-ingot", amount = 1}},
+    results = {{type = "item", name = "manganese-ingot", amount = 1}},
     energy_required = 25,
     ingredients = {
       {type = "fluid", name = "molten-manganese", amount = 250},

@@ -23,8 +23,9 @@ if mods["space-exploration"] then
 end
 
 if mods.Krastorio2 then
-    util.replace_ingredient("rail", "steel-beam", "mangalloy")
-    -- util.replace_ingredient("kr-quarry-drill", "steel-plate", "mangalloy")
+    util.replace_ingredient("rail", "kr-steel-beam", "mangalloy")
+    util.replace_ingredient("kr-quarry-drill", "kr-steel-beam", "mangalloy")
+    util.add_to_product("mangalloy", "iron-ore", 10)
 end
 
 for i, entity in pairs(data.raw.furnace) do

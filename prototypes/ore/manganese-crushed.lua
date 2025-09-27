@@ -2,8 +2,8 @@ local util = require("__manganese__.data-util");
 
 local icon = "__manganese__/graphics/icons/crushed-manganese.png"
 local prereq = {}
-if mods.Krastorio2 then 
-    category = "crushing"
+if mods.Krastorio2 then
+    category = "kr-crushing"
 else
     category = "crafting"
 end
