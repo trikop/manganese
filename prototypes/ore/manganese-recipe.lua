@@ -108,6 +108,6 @@ data:extend({
 end
 
 util.add_prerequisite("steel-processing", "manganese-smelting")
-if mods["Krastorio2"] then
+if mods["Krastorio2"] and mods["space-exploration"] then
   util.add_prerequisite("manganese-smelting", "automation-science-pack")
 end
