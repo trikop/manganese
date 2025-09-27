@@ -25,7 +25,8 @@ end
 if mods.Krastorio2 then
     util.replace_ingredient("rail", "kr-steel-beam", "mangalloy")
     util.replace_ingredient("kr-quarry-drill", "kr-steel-beam", "mangalloy")
-    util.add_to_product("mangalloy", "iron-ore", 10)
+    util.add_or_add_to_ingredient("mangalloy", "crushed-manganese", 5)
+    util.add_to_product("mangalloy", "mangalloy", -2)
 end
 
 for i, entity in pairs(data.raw.furnace) do
