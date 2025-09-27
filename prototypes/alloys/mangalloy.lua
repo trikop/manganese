@@ -53,7 +53,8 @@ if mods.bzfoundry and data.raw.item["foundry"] then util.set_to_founding("mangal
 
 util.add_prerequisite("railway", "mangalloy")
 util.replace_ingredient("rail", "steel-plate", "mangalloy")
-
+util.replace_ingredient("rail-ramp", "steel-plate", "mangalloy")
+util.replace_ingredient("rail-support", "steel-plate", "mangalloy")
 
 if mods["aai-industry"] then
     util.replace_ingredient("area-mining-drill", "steel-plate", "mangalloy")

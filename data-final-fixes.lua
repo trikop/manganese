@@ -20,11 +20,16 @@ if mods["space-exploration"] then
     util.add_product("se-scrap-recycling", {type = "item", name="manganese-ore", amount=1, probability=0.1})
     data.raw.item["se-space-thermodynamics-laboratory"].ingredient_count = 24, --made it 24, so it won't conflict with another mod hopefully xD
     util.add_ingredient("se-experimental-alloys-data", "manganese-plate", 1)
+    util.replace_ingredient("se-space-rail", "steel-plate", "mangalloy")
+    util.replace_ingredient("se-space-rail-ramp", "steel-plate", "mangalloy")
+    util.replace_ingredient("se-space-rail-support", "steel-plate", "mangalloy")
 end
 
 if mods.Krastorio2 then
     util.replace_ingredient("rail", "kr-steel-beam", "mangalloy")
     util.replace_ingredient("kr-quarry-drill", "kr-steel-beam", "mangalloy")
+    util.replace_ingredient("kr-air-purifier", "kr-steel-beam", "mangalloy")
+    util.replace_ingredient("kr-steel-pump", "kr-steel-beam", "mangalloy")
     util.add_or_add_to_ingredient("mangalloy", "crushed-manganese", 5)
     util.add_to_product("mangalloy", "mangalloy", -2)
 end

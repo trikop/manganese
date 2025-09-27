@@ -4,10 +4,8 @@ local category = {}
 local ingredients = {}
 if mods.Krastorio2 then 
     category = "smelting"
-    ingredients = {{"basic-tech-card", 1}}
 else
     category = "crafting"
-    ingredients = {{"automation-science-pack", 1}}
 end
 
 if data.raw.item["bismuth-plate"] then 
@@ -48,13 +46,13 @@ if data.raw.item["bismuth-plate"] then
         },
         unit = {
         count = 30, time = 10,
-        ingredients = ingredients,
+        ingredients = {{"automation-science-pack", 1}},
         },
         prerequisites = {},
     },
     })
     util.add_unlock_force("bismanol", "bismanol")
-    
+    util.add_prerequisite("bismanol", "manganese-smelting")
     if mods["aai-industry"] then
         util.add_prerequisite("electricity", "bismanol")
         util.add_ingredient("electric-motor","bismanol", 1)
@@ -62,5 +60,6 @@ if data.raw.item["bismuth-plate"] then
         util.add_prerequisite("automation", "bismanol")
         util.add_ingredient("electric-engine-unit","bismanol", 1)
     end
+
 end
     --neodium better version for small electric motors
