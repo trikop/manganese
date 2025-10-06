@@ -52,13 +52,18 @@ if data.raw.item["bismuth-plate"] then
     },
     })
     util.add_unlock_force("bismanol", "bismanol")
-    util.add_prerequisite("bismanol", "manganese-smelting")
+    util.add_prerequisite("manganese-smelting", "bismanol")
     if mods["aai-industry"] then
-        util.add_prerequisite("electricity", "bismanol")
+        util.add_prerequisite("electricity", "manganese-smelting")
         util.add_ingredient("electric-motor","bismanol", 1)
     else
         util.add_prerequisite("automation", "bismanol")
         util.add_ingredient("electric-engine-unit","bismanol", 1)
+    end
+    if mods["Krastorio2"] then
+        util.remove_prerequisite("manganese-smelting", "automation-science-pack")
+        util.set_tech_recipe("manganese-smelting", {{ "kr-basic-tech-card", 1}})
+        util.set_tech_recipe("bismanol", {{ "kr-basic-tech-card", 1}})
     end
 
 end
