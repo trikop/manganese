@@ -79,7 +79,7 @@ data:extend({
       variation_count = 8,
       hr_version =
       {
-      filename = "__manganese__/graphics/ores/manganese-ore.png",
+      filename = "__manganese__/graphics/ores/hr-manganese-ore.png",
         priority = "extra-high",
         size = 128,
         frame_count = 8,
