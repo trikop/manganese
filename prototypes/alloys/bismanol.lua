@@ -57,7 +57,7 @@ if data.raw.item["bismuth-plate"] then
         util.add_prerequisite("electricity", "bismanol")
         util.add_ingredient("electric-motor","bismanol", 1)
     else
-        util.add_prerequisite("automation", "bismanol")
+        util.add_prerequisite("electric-engine", "bismanol")
         util.add_ingredient("electric-engine-unit","bismanol", 1)
     end
 
