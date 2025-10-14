@@ -78,32 +78,6 @@ data:extend({
     },
     prerequisites = {},
 },
-  mods["TheBigFurnace"] and {
-    type = "recipe",
-    name = "big-manganese-plate",
-    icons = { { icon = "__manganese__/graphics/icons/manganese-plate.png", icon_size = 64 }, },
-    subgroup = "raw-material",
-    category = "big-smelting",
-    order = "d[manganese-plate]",
-    normal =
-    {
-      enabled = true,
-      energy_required = 5,
-      ingredients = {{"manganese-ore", 100}},
-      results = {
-        {type="item", name = util.me.manganese_plate, amount=100},
-      }
-    },
-    expensive =
-    {
-      enabled = true,
-      energy_required = 10,
-      ingredients = {{"manganese-ore", 100}},
-      results = {
-        {type="item", name = util.me.manganese_plate, amount=50},
-      }
-    }
-  } or nil,
 })
 end
 
