@@ -24,10 +24,10 @@ data:extend({
   icon_size = 64, icon_mipmaps = 4,
     icon = "__manganese__/graphics/icons/manganese-ore.png",
     pictures = {
-      {filename="__manganese__/graphics/icons/manganese-ore.png", size=64, scale=0.25},
-      {filename="__manganese__/graphics/icons/manganese-ore-1.png", size=64, scale=0.25},
-      {filename="__manganese__/graphics/icons/manganese-ore-2.png", size=64, scale=0.25},
-      {filename="__manganese__/graphics/icons/manganese-ore-3.png", size=64, scale=0.25},
+      {filename="__manganese__/graphics/icons/manganese-ore.png", size=64, scale=0.5},
+      {filename="__manganese__/graphics/icons/manganese-ore-1.png", size=64, scale=0.5},
+      {filename="__manganese__/graphics/icons/manganese-ore-2.png", size=64, scale=0.5},
+      {filename="__manganese__/graphics/icons/manganese-ore-3.png", size=64, scale=0.5},
     },
     subgroup = "raw-resource",
     order = "t-c-a",
@@ -72,20 +72,12 @@ data:extend({
         {
           sheet =
           {
-      filename = "__manganese__/graphics/ores/manganese-ore.png",
-      priority = "extra-high",
-      size = 64,
-      frame_count = 8,
-      variation_count = 8,
-      hr_version =
-      {
-      filename = "__manganese__/graphics/ores/hr-manganese-ore.png",
-        priority = "extra-high",
-        size = 128,
-        frame_count = 8,
-        variation_count = 8,
-        scale = 0.5
-      }
+            filename = "__manganese__/graphics/ores/hr-manganese-ore.png",
+            priority = "extra-high",
+            size = 128,
+            frame_count = 8,
+            variation_count = 8,
+            scale = 0.5
           }
     },
   },
