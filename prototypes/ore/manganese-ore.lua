@@ -72,20 +72,12 @@ data:extend({
         {
           sheet =
           {
-      filename = "__manganese__/graphics/ores/manganese-ore.png",
-      priority = "extra-high",
-      size = 64,
-      frame_count = 8,
-      variation_count = 8,
-      hr_version =
-      {
-      filename = "__manganese__/graphics/ores/hr-manganese-ore.png",
-        priority = "extra-high",
-        size = 128,
-        frame_count = 8,
-        variation_count = 8,
-        scale = 0.5
-      }
+            filename = "__manganese__/graphics/ores/hr-manganese-ore.png",
+            priority = "extra-high",
+            size = 128,
+            frame_count = 8,
+            variation_count = 8,
+            scale = 0.5
           }
     },
   },
