@@ -49,7 +49,7 @@ data:extend({
 },
 })
 util.add_unlock_force("mangalloy", "mangalloy")
-if mods.bzfoundry and data.raw.item["foundry"] then util.set_to_founding("mangalloy", {force=true}) end
+if mods.bzfoundry2 and data.raw.item["foundry"] then util.set_to_founding("mangalloy", {force=true}) end
 
 util.add_prerequisite("railway", "mangalloy")
 util.replace_ingredient("rail", "steel-plate", "mangalloy")
