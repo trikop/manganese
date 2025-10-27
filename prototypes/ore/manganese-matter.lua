@@ -54,10 +54,10 @@ local manganese_plate_matter =
     item_name = "manganese-plate",
     matter_count = 7.5,
     energy_required = 2,
-    only_deconversion = true,
+    -- only_deconversion = true,
     needs_stabilizer = true,
     unlocked_by = "manganese-matter-processing"
 	}
-matter.make_recipes(manganese_plate_matter)
+matter.make_deconversion_recipe(manganese_plate_matter)
 
 end
