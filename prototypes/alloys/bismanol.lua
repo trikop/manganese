@@ -2,7 +2,7 @@ local util = require("__manganese__.data-util");
 
 local category = {}
 local ingredients = {}
-if mods.Krastorio2 then 
+if mods.Krastorio2 then
     category = "smelting"
 else
     category = "crafting"
@@ -46,7 +46,7 @@ if data.raw.item["bismuth-plate"] then
         },
         unit = {
         count = 30, time = 10,
-        ingredients = {{"automation-science-pack", 1}},
+        ingredients = util.k2() and (util.se6() and {{"kr-basic-tech-card", 1}}) or {{"automation-science-pack", 1}},
         },
         prerequisites = {},
     },

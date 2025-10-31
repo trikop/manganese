@@ -59,3 +59,5 @@ util.replace_ingredient("rail-support", "steel-plate", "mangalloy")
 if mods["aai-industry"] then
     util.replace_ingredient("area-mining-drill", "steel-plate", "mangalloy")
 end
+
+util.add_prerequisite("mangalloy", "manganese-smelting")

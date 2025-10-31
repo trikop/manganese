@@ -19,35 +19,17 @@ data:extend({
         }
 ),
     main_product = util.me.manganese_plate,
-    -- normal = (mods["Krastorio2"] and
-    --     {
-    --       main_product = util.me.manganese_plate,
-    --       enabled = false,
-    --       energy_required = 16,
-    --       ingredients = {{"manganese-ore", 10}},
-    --       results = {
-    --         {type="item", name = util.me.manganese_plate, amount=10},
-    --       },
-    --     } or
-    --     {
-   
     enabled = false,
     allow_productivity = true,
-    energy_required = 1.6,
-    ingredients = {util.item("manganese-ore", 1)},
+    energy_required = util.k2() and 16 or 1.6,
+    ingredients = (util.k2() and {util.item("manganese-ore", 10)} or {util.item("manganese-ore", 1)}),
     results = {
-      {type="item", name = util.me.manganese_plate, amount=1},
+      {
+        type="item",
+        name = util.me.manganese_plate,
+        amount= util.k2() and 10 or 1
+      },
     },
-    --expensive =
-    -- {
-    --   main_product = util.me.manganese_plate,
-    --   enabled = false,
-    --   energy_required = 32,
-    --   ingredients = {{"manganese-ore", 4}},
-    --   results = {
-    --     {type="item", name = util.me.manganese_plate, amount=2},
-    --   },
-    -- }
   },
   {
     type = "item",
@@ -74,7 +56,7 @@ data:extend({
     },
     unit = {
     count = 30, time = 5,
-    ingredients = {{"automation-science-pack", 1}},
+    ingredients = util.k2() and (util.se6() and {{"kr-basic-tech-card", 1}}) or {{"automation-science-pack", 1}},
     },
     prerequisites = {},
 },
@@ -82,6 +64,6 @@ data:extend({
 end
 
 util.add_prerequisite("steel-processing", "manganese-smelting")
-if mods["Krastorio2"] then
+if util.k2() and not util.se6() then
   util.add_prerequisite("manganese-smelting", "automation-science-pack")
 end

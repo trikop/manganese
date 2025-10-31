@@ -134,7 +134,7 @@ else
       
     },
     })
-    table.insert(data.raw.technology["se-processing-vulcanite"].effects, 
+    table.insert(data.raw.technology["se-processing-vulcanite"].effects,
         {type = "unlock-recipe", recipe= "enriched-manganese-smelting-vulcanite"})
     data.raw.recipe["enriched-manganese-plate"].order= "d[manganese-plate]"
     se_delivery_cannon_recipes["enriched-manganese"] = {name= "enriched-manganese"}
