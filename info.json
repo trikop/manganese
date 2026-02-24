@@ -10,6 +10,6 @@
         "? space-exploration >= 0.7",
         "? Krastorio2",
         "? aai-industry",
-        "? 248k-Redux"
+        "? 248k-Redux >= 0.1.35"
     ]
 }
