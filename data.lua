@@ -8,3 +8,4 @@ require("prototypes/ore/manganese-crushed")
 
 require("prototypes/alloys/bismanol")
 require("prototypes/alloys/mangalloy")
+require("prototypes/ore/manganese-matter")
