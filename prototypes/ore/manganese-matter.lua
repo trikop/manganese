@@ -47,6 +47,12 @@ local manganese_matter =
 	}
 matter.make_recipes(manganese_matter)
 
+if mods["space-exploration"] then
+    util.add_ingredient("kr-matter-to-manganese-ore", "se-kr-charged-basic-stabilizer", 1, {force = true})
+    util.add_product("kr-matter-to-manganese-ore", { type = "item", name = "se-kr-charged-basic-stabilizer", amount = 1, probability = 0.199 }, {force = true})
+    util.add_product("kr-matter-to-manganese-ore", { type = "item", name = "se-kr-basic-stabilizer", amount = 1, probability = 0.8 }, {force = true})
+end
+
 
 local manganese_plate_matter =
 	{
