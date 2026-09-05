@@ -8,7 +8,7 @@ data:extend({
   {
     type = "recipe",
     name = util.me.manganese_plate,
-    category = "smelting",
+    categories = {"smelting"},
     order = "d[manganese-plate]",
     icons = (util.k2() and
         {

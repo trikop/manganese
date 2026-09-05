@@ -1,5 +1,5 @@
 -- Enriched Manganese for Krastorio2
-local util = require("data-util");
+local util = require("data-util")
 
 if mods["Krastorio2"] then
 data:extend(
@@ -27,7 +27,7 @@ data:extend(
     icon = "__manganese__/graphics/icons/enriched-manganese.png",
     icon_size = 64,
     icon_mipmaps = 3,
-    category = "chemistry",
+    categories = {"chemistry"},
     energy_required = 3,
     enabled = false,
     always_show_made_in = true,
@@ -62,7 +62,7 @@ data:extend(
         { icon = "__manganese__/graphics/icons/manganese-plate.png", icon_size = 64, icon_mipmaps = 3 },
         { icon = "__manganese__/graphics/icons/enriched-manganese.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
       },
-      category = "smelting",
+      categories = {"smelting"},
       energy_required = 16,
       enabled = false,
       always_show_made_in = true,
@@ -78,7 +78,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "dirty-water-filtration-manganese",
-		category = "kr-fluid-filtration",
+		categories = {"kr-fluid-filtration"},
 		icons =
 		{
 			{
@@ -99,13 +99,13 @@ data:extend(
 		always_show_products = true,
 		ingredients =
 		{
-			{type = "fluid", name = "kr-dirty-water", amount = 100, catalyst_amount = 100},
+			{type = "fluid", name = "kr-dirty-water", amount = 100},
 		},
 		results =
 		{
-			{type = "fluid", name = "water", amount = 90, catalyst_amount = 90},
-			{type = "item",  name = "stone", probability = 0.30, amount = 1},
-			{type = "item",  name = "manganese-ore", probability = 0.50, amount = 1},
+			{type = "fluid", name = "water", amount = 90},
+			{type = "item",  name = "stone", independent_probability = 0.30, amount = 1},
+			{type = "item",  name = "manganese-ore", independent_probability = 0.50, amount = 1},
 		},
 		crafting_machine_tint =
 		{

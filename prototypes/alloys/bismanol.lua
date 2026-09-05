@@ -24,7 +24,7 @@ if data.raw.item["bismuth-plate"] then
     {
         type = "recipe",
         name = "bismanol",
-        category = category,
+        categories = {category},
         order = "d[bismanol]",
         enabled = false,
         energy_required = 30,

@@ -61,7 +61,7 @@ function util.item(item, quantity, probability)
     quantity = 1
   end
   if probability then
-    return {type="item", name=item, amount=quantity, probability=probability}
+    return {type="item", name=item, amount=quantity, independed_probability=probability}
   else
     return {type="item", name=item, amount=quantity}
   end
@@ -168,7 +168,7 @@ function util.add_shiftite_recipe(item, shiftites, quantity)
       type = "recipe",
       name = name,
       localised_name = {"", {"item-name."..item}, " ↁEShiftite"},
-      category = "janus-shiftite",
+      categories = {"janus-shiftite"},
       subgroup = "janus-basic-from-shiftite",
       ingredients = its,
       results = {util.item(item, 5)},
@@ -501,7 +501,7 @@ function util.se_landfill(params)
         energy_required = 1,
         enabled=false,
         name = lname,
-        category = "hard-recycling",
+        categories = {"hard-recycling"},
         order = "z-b-"..params.ore,
         subgroup = "terrain",
         results = {{type="item", name="landfill", amount=1}},
@@ -592,7 +592,7 @@ function util.se_matter(params)
         type = "recipe",
         name = fname,
         localised_name = {"recipe-name.se-matter-fusion-to", {"item-name."..params.ore}},
-        category = "space-materialisation",
+        categories = {"space-materialisation"},
         subgroup = "materialisation",
         order = "a-b-z",
         icons = {
@@ -615,8 +615,8 @@ function util.se_matter(params)
         results = {
           {type="item", name=params.ore, amount=params.quant_out},
           {type="item", name="se-contaminated-scrap", amount=1},
-          {type="item", name=sedata, amount=1, probability=.99},
-          {type="item", name=sejunk, amount=1, probability=.01},
+          {type="item", name=sedata, amount=1, independed_probability=.99},
+          {type="item", name=sejunk, amount=1, independed_probability=.01},
           {type="fluid", name="se-space-coolant-hot", amount=25, ignored_by_stats=25, ignored_by_productivity=25},
         }
       }
@@ -631,7 +631,7 @@ function util.se_matter(params)
           type = "recipe",
           name = lname,
           localised_name = {"recipe-name.se-kr-matter-liberation", {"item-name."..params.ore}},
-          category = "space-materialisation",
+          categories = {"space-materialisation"},
           subgroup = "advanced-particle-stream",
           order = "a-b-z",
           icons = {
@@ -652,8 +652,8 @@ function util.se_matter(params)
             {type="fluid", name="se-particle-stream", amount=500},
           },
           results = {
-            {type="item", name="se-kr-matter-liberation-data", amount=1, probability=.99},
-            {type="item", name=sejunk, amount=1, probability=.01},
+            {type="item", name="se-kr-matter-liberation-data", amount=1, independed_probability=.99},
+            {type="item", name=sejunk, amount=1, independed_probability=.01},
             {type="fluid", name="se-particle-stream", amount=params.stream_out, ignored_by_stats=50, ignored_by_productivity=50},
           }
         }
@@ -1175,7 +1175,7 @@ function set_product_probability(recipe, product, probability)
     if recipe.results then
       for i, result in pairs(recipe.results) do
         if result.name == product then
-          result.probability = probability
+          result.independed_probability = probability
         end
       end
     end
@@ -1440,7 +1440,7 @@ function util.set_category(recipe_name, category, options)
   if data.raw.recipe[recipe_name] and data.raw["recipe-category"][category] then
     me.add_modified(recipe_name)
     prepare_redo_recycling(recipe_name)
-    data.raw.recipe[recipe_name].category = category
+    data.raw.recipe[recipe_name].categories = {category}
   end
 end
 
@@ -1828,7 +1828,7 @@ function util.sum_products(recipe_name)
       elseif result.amount then amt = result.amount
       elseif result.amount_min then amt = (result.amount_min + result.amount_max)/2
       end
-      if result.probability then amt = amt * result.probability end
+      if result.independed_probability then amt = amt * result.independed_probability end
       sum = sum + amt
     end
     return sum
@@ -1972,7 +1972,7 @@ function util.addtype(name,atint,desc) --,pictures)
       {
         amount_min = 3,
         amount_max = 5,
-        probability = 1
+        independed_probability = 1
       }
   }
   local chunkamount = 1000
