@@ -103,7 +103,7 @@ data:extend(
 		},
 		results =
 		{
-			{type = "fluid", name = "water", amount = 90},
+			{type = "fluid", name = "water", amount = 90, ignored_by_stats=90, ignored_by_productivity=90},
 			{type = "item",  name = "stone", independent_probability = 0.30, amount = 1},
 			{type = "item",  name = "manganese-ore", independent_probability = 0.50, amount = 1},
 		},
