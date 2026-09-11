@@ -3,21 +3,21 @@ require("prototypes/ore/manganese-recipe-modules")
 local util = require("__manganese__.data-util");
 if util.me.get_setting("manganese-disable-manganese-as-smelting-byproduct") == false then
     if mods.Krastorio2 then
-        util.add_product("iron-plate", {type="item", name="manganese-plate", amount=1, probability=0.33})
-        util.add_product("enriched-iron", {type="item", name="manganese-ore", amount=1, probability=0.4})
+        util.add_product("iron-plate", {type="item", name="manganese-plate", amount=1, independent_probability=0.33})
+        util.add_product("enriched-iron", {type="item", name="manganese-ore", amount=1, independent_probability=0.4})
         util.add_or_add_to_ingredient("iron-plate", "iron-ore", 2)
         util.add_or_add_to_ingredient("enriched-iron", "iron-ore", 2)
         util.set_main_product("iron-plate", "iron-plate")
 
     else
-        util.add_product("iron-plate", {type="item", name="manganese-plate", amount=1, probability=0.033})
+        util.add_product("iron-plate", {type="item", name="manganese-plate", amount=1, independent_probability=0.033})
         util.set_main_product("iron-plate", "iron-plate")
     end
 end
 
 if mods["space-exploration"] then 
     util.add_to_product("se-core-fragment-omni", "manganese-ore", -5)
-    util.add_product("se-scrap-hard-recycling", {type = "item", name="manganese-ore", amount=1, probability=0.1})
+    util.add_product("se-scrap-hard-recycling", {type = "item", name="manganese-ore", amount=1, independent_probability=0.1})
     data.raw.item["se-space-thermodynamics-laboratory"].ingredient_count = 24, --made it 24, so it won't conflict with another mod hopefully xD
     util.add_ingredient("se-experimental-alloys-data", "manganese-plate", 1)
     util.replace_ingredient("se-space-rail", "steel-plate", "mangalloy")

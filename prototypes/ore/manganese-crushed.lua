@@ -21,7 +21,7 @@ data:extend({
 {
     type = "recipe",
     name = "crushed-manganese",
-    category = category,
+    categories = {category},
     order = "d[crushed-manganese]",
     enabled = false,
     energy_required = 21,

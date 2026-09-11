@@ -42,7 +42,7 @@ if mods["space-exploration"] then
   },
   {
     type = "recipe",
-    category = "smelting",
+    categories = {"smelting"},
     name = "molten-manganese",
     main_product = "molten-manganese",
     subgroup = "manganese",
@@ -62,7 +62,7 @@ if mods["space-exploration"] then
   {
     type = "recipe",
     name = "manganese-ingot",
-    category = "casting",
+    categories = {"casting"},
     results = {{type = "item", name = "manganese-ingot", amount = 1}},
     energy_required = 25,
     ingredients = {
@@ -74,7 +74,7 @@ if mods["space-exploration"] then
   },
   {
     type = "recipe",
-    category = "crafting",
+    categories = {"crafting"},
     name = "manganese-ingot-to-plate",
 
     icons = {
@@ -113,7 +113,7 @@ else
     {
       type = "recipe",
       name = "enriched-manganese-smelting-vulcanite",
-      category = "smelting",
+      categories = {"smelting"},
       order = "d[manganese-plate]",
       energy_required = 24,
       enabled = false,
@@ -143,7 +143,7 @@ else
     {
       type = "recipe",
       name = "manganese-smelting-vulcanite",
-      category = "smelting",
+      categories = {"smelting"},
       subgroup = "plates",
       order = "d[manganese-plate]",
       energy_required = 24,

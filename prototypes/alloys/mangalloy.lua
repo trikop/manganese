@@ -22,7 +22,7 @@ data:extend({
 {
     type = "recipe",
     name = "mangalloy",
-    category = category,
+    categories = {category},
     order = "d[mangalloy]",
     enabled = false,
     energy_required = 13,
